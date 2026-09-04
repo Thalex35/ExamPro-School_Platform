@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Cours from "./pages/Cours/Cours.jsx";
 import Examen from "./pages/Examen/Examen.jsx";
@@ -9,7 +9,7 @@ import Ressources from "./pages/Ressources/Ressources.jsx";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Cours" element={<Cours />} />
@@ -20,6 +20,6 @@ export default function App() {
         <Route path="/Ressources" element={<Ressources />} />
         <Route path="*" element={<Home />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
